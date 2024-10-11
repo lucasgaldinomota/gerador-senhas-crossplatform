@@ -5,12 +5,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    props: {
-        id: String,
-        texto: String,
-        selecionado: Boolean,
-    },
-};
+<script setup>
+defineProps({
+    id: String,
+    texto: String,
+    selecionado: Boolean,
+});
 </script>

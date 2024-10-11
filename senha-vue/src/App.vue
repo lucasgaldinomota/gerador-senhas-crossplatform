@@ -15,7 +15,7 @@
   </main>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import Checkbox from './components/Checkbox.vue';
 import UltimasSenhas from './components/UltimasSenhas.vue';
@@ -23,35 +23,18 @@ import TamanhoInput from './components/TamanhoInput.vue';
 import opcoes from '../../core/OpcoesCaracteres';
 import Senha from '../../core/Senha';
 
-export default {
-  components: {
-    Checkbox,
-    UltimasSenhas,
-    TamanhoInput,
-  },
-  setup() {
-    const tamanho = ref(8);
-    const tiposCaracteres = ref(opcoes);
-    const senhasGeradas = ref([]);
+const tamanho = ref(8);
+const tiposCaracteres = ref(opcoes);
+const senhasGeradas = ref([]);
 
-    const lidaComMudanca = (indice) => {
-      tiposCaracteres.value[indice].valor = !tiposCaracteres.value[indice].valor;
-    };
+const lidaComMudanca = (indice) => {
+  tiposCaracteres.value[indice].valor = !tiposCaracteres.value[indice].valor;
+};
 
-    const gerarSenha = () => {
-      const novaSenha = Senha.gerarSenha(tamanho.value, tiposCaracteres.value);
-      senhasGeradas.value.unshift(novaSenha);
-      senhasGeradas.value.splice(8);
-    };
-
-    return {
-      tamanho,
-      tiposCaracteres,
-      senhasGeradas,
-      lidaComMudanca,
-      gerarSenha,
-    };
-  },
+const gerarSenha = () => {
+  const novaSenha = Senha.gerarSenha(tamanho.value, tiposCaracteres.value);
+  senhasGeradas.value.unshift(novaSenha);
+  senhasGeradas.value.splice(8);
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 className="mainTitle">Últimas Senhas Geradas:</h2>
+        <h2 class="mainTitle">Últimas Senhas Geradas:</h2>
         <ul class="ultimasList">
             <li v-for="(senha, index) in senhas" :key="index">
                 <ExibeSenha :senha="senha" />
@@ -9,15 +9,10 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import ExibeSenha from './ExibeSenha.vue';
 
-export default {
-    props: {
-        senhas: Array,
-    },
-    components: {
-        ExibeSenha,
-    },
-};
+const props = defineProps({
+    senhas: Array,
+});
 </script>

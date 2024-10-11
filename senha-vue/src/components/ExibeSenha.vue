@@ -8,28 +8,20 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 
-export default {
-    props: {
-        senha: String,
-    },
-    setup(props) {
-        const mostrarAviso = ref(false);
+const props = defineProps({
+    senha: String,
+});
 
-        const copiar = () => {
-            navigator.clipboard.writeText(props.senha);
-            mostrarAviso.value = true;
-            setTimeout(() => {
-                mostrarAviso.value = false;
-            }, 2000);
-        };
+const mostrarAviso = ref(false);
 
-        return {
-            mostrarAviso,
-            copiar,
-        };
-    },
+const copiar = () => {
+    navigator.clipboard.writeText(props.senha);
+    mostrarAviso.value = true;
+    setTimeout(() => {
+        mostrarAviso.value = false;
+    }, 2000);
 };
 </script>
