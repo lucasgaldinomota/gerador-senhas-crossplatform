@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Gerador de Senha',

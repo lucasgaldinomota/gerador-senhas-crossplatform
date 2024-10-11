@@ -1,4 +1,5 @@
 import ExibeSenha from "./ExibeSenha";
+import '../app/globals.css';
 
 interface UltimasSenhasProps {
     senhas: string[];
@@ -6,9 +7,9 @@ interface UltimasSenhasProps {
 
 export default function UltimasSenhas({ senhas }: UltimasSenhasProps) {
     return (
-        <div className="mt-3">
-            <h2 className="font-bold text-lg">Últimas Senhas Geradas:</h2>
-            <ul className="ultimasSenhas">
+        <div>
+            <h2 className="mainTitle">Últimas Senhas Geradas:</h2>
+            <ul className="ultimasList">
                 {senhas.map((senha, index) => (
                     <li key={index}>
                         <ExibeSenha senha={senha} />

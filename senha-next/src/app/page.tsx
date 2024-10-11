@@ -5,7 +5,7 @@ import Checkbox from "@/components/Checkbox";
 import Senha from "../../../core/Senha";
 import UltimasSenhas from "@/components/UltimasSenhas";
 import TamanhoInput from "@/components/TamanhoInput";
-import styles from './page.module.css';
+import './globals.css';
 
 export default function Home() {
     const [tamanho, setTamanho] = useState<number>(8);
@@ -26,11 +26,11 @@ export default function Home() {
     };
 
     return (
-        <main className={styles.main}>
-            <div className={styles.container}>
-                <h1 className={styles.title}>Gerador de Senhas</h1>
+        <main className={"main"}>
+            <div className={"mainContainer"}>
+                <h1 className={"mainTitle"}>Gerador de Senhas</h1>
                 <TamanhoInput tamanho={tamanho} setTamanho={setTamanho} />
-                <div className={styles.checkboxContainer}>
+                <div className={"checkboxContainer"}>
                     {tiposCaracteres.map((opcao, i) => (
                         <Checkbox
                             key={opcao.id}
@@ -41,11 +41,11 @@ export default function Home() {
                         />
                     ))}
                 </div>
-                <button className={styles.button} onClick={gerarSenha}>
+                <button className={"mainButton"} onClick={gerarSenha}>
                     Gerar Senha
                 </button>
             </div>
-            <div className={styles.container}>
+            <div className={"mainContainer"}>
                 <UltimasSenhas senhas={senhasGeradas} />
             </div>
         </main>

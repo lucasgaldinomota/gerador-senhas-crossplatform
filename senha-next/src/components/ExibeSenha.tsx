@@ -1,6 +1,6 @@
 import { IconCopy } from "@tabler/icons-react";
 import { useState } from "react";
-import styles from '../app/page.module.css';
+import '../app/globals.css';
 
 interface ExibeSenhaProps {
     senha: string;
@@ -18,18 +18,16 @@ export default function (props: ExibeSenhaProps) {
     };
 
     return (
-        <div className={styles.senhaContainer}>
+        <div>
             {props.senha.trim() !== "" && (
-                <>
-                    <div className={styles.senhaBox}>
-                        {props.senha}
-                        <IconCopy className={styles.copiarIcone} onClick={copiar} />
-                    </div>
-                </>
+                <div className={"senhaContainer"}>
+                    {props.senha}
+                    <IconCopy className={"copiarIcone"} onClick={copiar} />
+                </div>
             )}
 
             {mostrarAviso && (
-                <p className={styles.copiadoAviso}>Senha copiada para área de transferência!</p>
+                <p className={"copiadoAviso"}>Senha copiada para área de transferência!</p>
             )}
         </div>
     );

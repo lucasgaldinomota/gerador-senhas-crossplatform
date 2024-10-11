@@ -1,4 +1,4 @@
-import styles from '../app/page.module.css';
+import '../app/globals.css';
 
 interface CheckboxProps {
     id: string;
@@ -10,7 +10,7 @@ interface CheckboxProps {
 export default function (props: CheckboxProps) {
     const id = `checkbox-${props.id}`;
     return (
-        <div className={styles.checkboxContainer}>
+        <div className={"checkboxContainer"}>
             <input
                 type="checkbox"
                 checked={props.selecionado}

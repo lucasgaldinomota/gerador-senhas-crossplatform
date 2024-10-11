@@ -1,4 +1,4 @@
-import styles from '../app/page.module.css';
+import '../app/globals.css';
 
 interface TamanhoInputProps {
     tamanho: number;
@@ -7,8 +7,8 @@ interface TamanhoInputProps {
 
 export default function TamanhoInput({ tamanho, setTamanho }: TamanhoInputProps) {
     return (
-        <div className={styles.rangeContainer}>
-            <label className={styles.rangeLabel}>
+        <div>
+            <label className={"inputLabel"}>
                 <span>Tamanho da Senha:</span>
                 <input
                     type="number"
@@ -16,7 +16,7 @@ export default function TamanhoInput({ tamanho, setTamanho }: TamanhoInputProps)
                     max={30}
                     value={tamanho}
                     onChange={(e) => setTamanho(+e.target.value)}
-                    className={styles.numberInput}
+                    className={"inputNumber"}
                 />
             </label>
         </div>
