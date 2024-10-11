@@ -21,6 +21,5 @@ export class TamanhoInputComponent {
   onChange(value: number) {
     this.tamanho = value;
     this.tamanhoChange.emit(this.tamanho);
-    console.log('Tamanho atualizado:', this.tamanho);
   }
 }

@@ -1,12 +1,14 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ExibeSenhaComponent } from './exibe-senha.component';
 
 @Component({
   selector: 'app-ultimas-senhas',
   standalone: true,
-  imports: [ExibeSenhaComponent],
+  imports: [CommonModule, ExibeSenhaComponent],
   template: `
 <div>
+  <h2 class="mainTitle">Últimas Senhas Geradas:</h2>
     <ul class="ultimasList">
         <li *ngFor="let senha of senhas">
             <app-exibe-senha [senha]="senha"></app-exibe-senha>
@@ -17,9 +19,5 @@ import { ExibeSenhaComponent } from './exibe-senha.component';
 })
 
 export class UltimasSenhasComponent {
-  constructor() {
-    console.log(this.senhas)
-  }
-
   @Input() senhas: string[] = [];
 }

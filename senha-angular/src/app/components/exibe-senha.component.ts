@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-exibe-senha',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <div *ngIf="senha.trim() !== ''">
     <div class="senhaContainer">

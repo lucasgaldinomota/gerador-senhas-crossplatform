@@ -11,11 +11,11 @@ import opcoesCaracteres from './core/OpcoesCaracteres';
 export class AppComponent {
   tamanho: number = 8;
   tiposCaracteres: OpcaoCaractere[] = opcoesCaracteres;
-  senhasGeradas: string[] = ['sadsadadsad', 'sadasdasdsad'];
+  senhasGeradas: string[] = [];
 
   gerarSenha() {
     const senhaGerada = Senha.gerarSenha(this.tamanho, this.tiposCaracteres);
-    this.senhasGeradas.unshift(senhaGerada);
+    this.senhasGeradas = [senhaGerada, ...this.senhasGeradas];
 
     if (this.senhasGeradas.length > 10) {
       this.senhasGeradas.pop();
