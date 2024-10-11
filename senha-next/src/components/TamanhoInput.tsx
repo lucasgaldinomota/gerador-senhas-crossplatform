@@ -7,18 +7,18 @@ interface TamanhoInputProps {
 
 export default function TamanhoInput({ tamanho, setTamanho }: TamanhoInputProps) {
     return (
-        <div>
+        <div className="inputContainer">
             <label className={"inputLabel"}>
-                <span>Tamanho da Senha:</span>
-                <input
-                    type="number"
-                    min={5}
-                    max={30}
-                    value={tamanho}
-                    onChange={(e) => setTamanho(+e.target.value)}
-                    className={"inputNumber"}
-                />
+                Tamanho da Senha:
             </label>
+            <input
+                className={"inputNumber"}
+                type="number"
+                min={5}
+                max={30}
+                value={tamanho}
+                onChange={(e) => setTamanho(+e.target.value)}
+            />
         </div>
     );
 }

@@ -44,10 +44,14 @@ body {
   font-size: 1.5rem;
 }
 
-.inputLabel {
+.inputContainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 1rem;
+}
+
+.inputLabel {
   font-size: 1.5rem;
 }
 

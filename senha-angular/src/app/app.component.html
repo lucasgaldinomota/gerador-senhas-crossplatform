@@ -1,15 +1,15 @@
 <div class="main">
-  <div class="container gerador-senha">
-    <h1 class="title">Gerador de Senhas</h1>
-    <tamanho-input [(tamanho)]="tamanho" (tamanhoChange)="onTamanhoChange($event)"></tamanho-input>
+  <div class="mainContainer">
+    <h1 class="mainTitle">Gerador de Senhas</h1>
+    <app-tamanho-input [(tamanho)]="tamanho" (tamanhoChange)="onTamanhoChange($event)"></app-tamanho-input>
     <div class="checkboxContainer">
       <app-checkbox *ngFor="let opcao of tiposCaracteres; let i = index" [id]="opcao.id" [texto]="opcao.nome"
         [selecionado]="opcao.valor" (lidaComMudanca)="lidaComMudanca(i)">
       </app-checkbox>
     </div>
-    <button class="button" (click)="gerarSenha()">Gerar Senha</button>
+    <button class="mainButton" (click)="gerarSenha()">Gerar Senha</button>
   </div>
-  <div class="container senhas-geradas">
+  <div class="mainContainer">
     <app-ultimas-senhas [senhas]="senhasGeradas"></app-ultimas-senhas>
   </div>
 </div>

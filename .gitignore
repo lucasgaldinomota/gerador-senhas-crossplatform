@@ -24,3 +24,5 @@ Thumbs.db
 # Outros arquivos a serem ignorados
 .idea/
 .vscode/
+.next/
+.angular/
