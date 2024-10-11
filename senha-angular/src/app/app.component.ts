@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import OpcaoCaractere from './core/OpcaoCaractere';
-import Senha from './core/Senha';
-import opcoesCaracteres from './core/OpcoesCaracteres';
+import OpcaoCaractere from '../../../core/OpcaoCaractere';
+import Senha from '../../../core/Senha';
+import opcoesCaracteres from '../../../core/OpcoesCaracteres';
 
 @Component({
   selector: 'app-root',
