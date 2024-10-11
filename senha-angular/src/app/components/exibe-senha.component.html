@@ -1,0 +1,7 @@
+<div *ngIf="senha.trim() !== ''">
+  <div class="senha-container">
+    {{ senha }}
+    <span (click)="copiar()">Copy</span>
+  </div>
+  <p *ngIf="mostrarAviso">Senha copiada!</p>
+</div>

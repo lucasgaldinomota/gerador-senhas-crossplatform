@@ -8,8 +8,8 @@ interface UltimasSenhasProps {
 export default function UltimasSenhas({ senhas }: UltimasSenhasProps) {
     return (
         <div>
-            <h2 className="mainTitle">Últimas Senhas Geradas:</h2>
-            <ul className="ultimasList">
+            <h2 className="main-title">Últimas Senhas Geradas:</h2>
+            <ul className="ultimas-list">
                 {senhas.map((senha, index) => (
                     <li key={index}>
                         <ExibeSenha senha={senha} />

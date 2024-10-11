@@ -20,14 +20,14 @@ export default function (props: ExibeSenhaProps) {
     return (
         <div>
             {props.senha.trim() !== "" && (
-                <div className={"senhaContainer"}>
+                <div className={"senha-container"}>
                     {props.senha}
                     <IconCopy className={"copiarIcone"} onClick={copiar} />
                 </div>
             )}
 
             {mostrarAviso && (
-                <p className={"copiadoAviso"}>Senha copiada para área de transferência!</p>
+                <p>Senha copiada para área de transferência!</p>
             )}
         </div>
     );

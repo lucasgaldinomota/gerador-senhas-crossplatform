@@ -1,6 +1,6 @@
 <template>
-    <div class="senhaContainer">
-        <div v-if="senha.trim() !== ''" class="senhaBox">
+    <div class="senha-container">
+        <div v-if="senha.trim() !== ''">
             {{ senha }}
             <button @click="copiar">📋</button>
         </div>

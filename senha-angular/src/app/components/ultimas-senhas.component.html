@@ -1,0 +1,8 @@
+<div>
+  <h2 class="main-title">Últimas Senhas Geradas:</h2>
+  <ul class="ultimas-list">
+    <li *ngFor="let senha of senhas">
+      <app-exibe-senha [senha]="senha"></app-exibe-senha>
+    </li>
+  </ul>
+</div>

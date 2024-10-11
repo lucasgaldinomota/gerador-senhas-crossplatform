@@ -1,5 +1,5 @@
 <template>
-    <div class="checkboxContainer">
+    <div class="checkbox-container">
         <input type="checkbox" :id="id" :checked="selecionado" @change="$emit('mudanca')" />
         <label :for="id">{{ texto }}</label>
     </div>

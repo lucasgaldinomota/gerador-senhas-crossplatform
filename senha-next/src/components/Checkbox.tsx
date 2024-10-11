@@ -10,7 +10,7 @@ interface CheckboxProps {
 export default function (props: CheckboxProps) {
     const id = `checkbox-${props.id}`;
     return (
-        <div className={"checkboxContainer"}>
+        <div className={"checkbox-container"}>
             <input
                 type="checkbox"
                 checked={props.selecionado}

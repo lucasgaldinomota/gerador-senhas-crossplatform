@@ -1,8 +1,8 @@
 <template>
-    <div class="inputContainer">
-        <label class="inputLabel">Tamanho da Senha:</label>
+    <div class="input-container">
+        <label class="input-label">Tamanho da Senha:</label>
         <input type="number" min="5" max="30" :value="tamanho" 
-            @input="emit('update:modelValue', +$event.target.value)" class="inputNumber" />
+            @input="emit('update:modelValue', +$event.target.value)" class="input-number" />
     </div>
 </template>
 

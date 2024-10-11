@@ -27,10 +27,10 @@ export default function Home() {
 
     return (
         <main className={"main"}>
-            <div className={"mainContainer"}>
-                <h1 className={"mainTitle"}>Gerador de Senhas</h1>
+            <div className={"main-container"}>
+                <h1 className={"main-title"}>Gerador de Senhas</h1>
                 <TamanhoInput tamanho={tamanho} setTamanho={setTamanho} />
-                <div className={"checkboxContainer"}>
+                <div className={"checkbox-container"}>
                     {tiposCaracteres.map((opcao, i) => (
                         <Checkbox
                             key={opcao.id}
@@ -41,11 +41,11 @@ export default function Home() {
                         />
                     ))}
                 </div>
-                <button className={"mainButton"} onClick={gerarSenha}>
+                <button className={"main-button"} onClick={gerarSenha}>
                     Gerar Senha
                 </button>
             </div>
-            <div className={"mainContainer"}>
+            <div className={"main-container"}>
                 <UltimasSenhas senhas={senhasGeradas} />
             </div>
         </main>

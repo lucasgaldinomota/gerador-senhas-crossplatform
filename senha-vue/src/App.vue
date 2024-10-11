@@ -1,15 +1,15 @@
 <template>
   <main class="main">
-    <div class="mainContainer">
-      <h1 class="mainTitle">Gerador de Senhas</h1>
+    <div class="main-container">
+      <h1 class="main-title">Gerador de Senhas</h1>
       <TamanhoInput v-model="tamanho" />
-      <div class="checkboxContainer">
+      <div class="checkbox-container">
         <Checkbox v-for="(opcao, index) in tiposCaracteres" :key="opcao.id" :id="opcao.id" :texto="opcao.nome"
           :selecionado="opcao.valor" @mudanca="lidaComMudanca(index)" />
       </div>
-      <button class="mainButton" @click="gerarSenha">Gerar Senha</button>
+      <button class="main-button" @click="gerarSenha">Gerar Senha</button>
     </div>
-    <div class="mainContainer">
+    <div class="main-container">
       <UltimasSenhas :senhas="senhasGeradas" />
     </div>
   </main>

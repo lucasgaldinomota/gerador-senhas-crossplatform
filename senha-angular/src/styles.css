@@ -10,14 +10,14 @@ body {
   padding: 2rem;
 }
 
-.mainTitle {
+.main-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
   font-weight: bold;
 }
 
-.mainContainer {
+.main-container {
   flex: 1;
   max-width: 45%;
   background-color: #334152;
@@ -26,7 +26,7 @@ body {
   padding: 2rem;
 }
 
-.mainButton {
+.main-button {
   color: white;
   background-color: #3b82f6;
   font-size: 1.5rem;
@@ -39,23 +39,23 @@ body {
   margin-top: 1.5rem;
 }
 
-.checkboxContainer {
+.checkbox-container {
   margin: 1rem 0;
   font-size: 1.5rem;
 }
 
-.inputContainer {
+.input-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
 }
 
-.inputLabel {
+.input-label {
   font-size: 1.5rem;
 }
 
-.inputNumber {
+.input-number {
   width: 80px;
   padding: 0.3rem;
   border-radius: 0.5rem;
@@ -64,7 +64,7 @@ body {
   font-size: 1.25rem;
 }
 
-.senhaContainer {
+.senha-container {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
@@ -76,7 +76,7 @@ body {
   font-size: 1.2rem;
 }
 
-.ultimasList {
+.ultimas-list {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0.5rem;

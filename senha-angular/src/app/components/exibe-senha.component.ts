@@ -5,17 +5,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-exibe-senha',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div *ngIf="senha.trim() !== ''">
-    <div class="senhaContainer">
-        {{ senha }}
-        <span (click)="copiar()" class="copiarIcone">Copy</span>
-    </div>
-    <p *ngIf="mostrarAviso" class="copiadoAviso">Senha copiada!</p>
-</div>
-  `,
+  templateUrl: './exibe-senha.component.html',
 })
-
 export class ExibeSenhaComponent {
   @Input() senha: string = '';
   mostrarAviso: boolean = false;
